@@ -29,6 +29,7 @@
 
 
 ```
+@Test
 void testGetterAndSetter() {
     HelloEncapsulation obj = new HelloEncapsulation(42);
 
@@ -42,6 +43,7 @@ void testGetterAndSetter() {
 
 
 ```
+@Test
 void testCircleArea() {
     Circle c = new Circle(2);
 
@@ -91,6 +93,7 @@ When a D9 object is created the constructor of the parent class is called first.
 
 5)
 ```
+@Test
 void testEagerSingleton() {
     EagerSingleton a = EagerSingleton.getInstance();
     EagerSingleton b = EagerSingleton.getInstance();
@@ -100,6 +103,7 @@ void testEagerSingleton() {
 ```
 
 ```
+@Test 
 void testLazySingleton() {
     LazySingleton a = LazySingleton.getInstance();
     LazySingleton b = LazySingleton.getInstance();
@@ -107,3 +111,52 @@ void testLazySingleton() {
     assertSame(a, b);
 }
 ```
+
+
+## Part 4 
+
+1) To make a class immutable, the fields should be private and final. the values should also be set in the constructor and no setters inside. Finally, the class have to be final to prevent inheritance.
+
+
+2) - **Immutable object:** object whose state cannot change after it is created.
+   - **Immutable class :** class designed that all its objects are immutable.
+
+
+3) immutable objects are efficient and safer because their values cannot be changed by mistake. Its also easier for us to manipulate this type of object to understand how it works and solve easily bugs
+
+
+4) Java are useful to store data ant to return several values from a method.
+
+
+5)
+
+```
+@Test
+   void testHelloImmutable() {
+   HelloImmutable hi = new HelloImmutable(1, "abc");
+
+   assertEquals(1, hi.getI1());
+   assertEquals("abc", hi.getS1());
+   }
+```
+```
+@Test
+void testHelloJavaRecord() {
+HelloJavaRecord hjr = new HelloJavaRecord(1, "abc");
+
+    assertEquals(1, hjr.i1());
+    assertEquals("abc", hjr.s1());
+}
+```
+
+## Part 5
+1) "==" compares primitives values or checks if tw oreferences points to the same object, while "equals()" compares the content of objects.
+
+
+2) if two objects are equal with "equals()", they must have the same "hashCode()" value.
+
+
+3) Object is the parent class of all Java classes and provides methods like equals(), hashCode() and toString()
+
+
+4) If two object are equals, they must have the same hash code.
