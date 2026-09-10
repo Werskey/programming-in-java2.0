@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"agh.ii.prinjava.lab00.lst00_01"},{"l":"All Packages","u":"allpackages-index.html","k":"18"}];updateSearchResults();
