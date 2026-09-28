@@ -60,3 +60,37 @@ interface D { void m1(); }
 ## Part 5
 
 1) a lambda expression is used to create an implementation of a functional interface in a shorter way.
+
+3)
+void -> int
+```
+@FunctionalInterface
+interface F1 {
+int apply();
+}
+```
+
+int -> void
+```
+@FunctionalInterface
+interface F2 {
+    void apply(int x);
+}
+```
+int -> int 
+```
+@FunctionalInterface
+interface F3 {
+    int apply(int x);
+}
+```
+
+(int,int) -> void
+```
+@FunctionalInterface
+interface F4 {
+    void apply(int x, int y);
+}
+```
+
+

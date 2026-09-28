@@ -1,30 +1,35 @@
-package agh.ii.prinjava.lab02.exc02_01.impl;
-
-import agh.ii.prinjava.lab02.exc02_01.StackOfInts;
+package agh.ii.prinjava.lab02.exc02_01;
 
 /**
- * Stack of integers factory
+ * Represents a stack of integers.
  */
-public final class StackOfIntsFtry {
-    private StackOfIntsFtry() {
-    }
+public interface StackOfInts {
 
-    enum Impln {
-        /**
-         * Array Based
-         */
-        ARRAY_B,
+    /**
+     * Removes and returns the top element of the stack.
+     *
+     * @return the removed element
+     */
+    int pop();
 
-        /**
-         * (Custom) Linked List Based
-         */
-        L_LIST_B //
-    }
+    /**
+     * Adds an element to the top of the stack.
+     *
+     * @param x the element to add
+     */
+    void push(int x);
 
-    static StackOfInts create(Impln s) {
-        return switch (s) {
-            case ARRAY_B -> new ArrayBasedImpl();
-            case L_LIST_B -> new LinkedListBasedImpl();
-        };
-    }
+    /**
+     * Returns the number of elements in the stack.
+     *
+     * @return the number of elements
+     */
+    int numOfElems();
+
+    /**
+     * Returns the top element without removing it.
+     *
+     * @return the top element
+     */
+    int peek();
 }
