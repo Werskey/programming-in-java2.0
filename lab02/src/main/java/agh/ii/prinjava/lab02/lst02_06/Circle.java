@@ -1,0 +1,13 @@
+class Circle extends Shape {
+    private double r;
+
+    @Override
+    double area() {
+        System.out.println("Circle.area()");
+        return Math.PI * r * r;
+    }
+
+    public Circle(double r) {
+        this.r = r;
+    }
+}

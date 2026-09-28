@@ -34,3 +34,29 @@
 
 3)  a) Yes an inner class can be used in another class if the inner is accessible.
     b) Yes it's possible, public, protected, private can be used for member inner classes. Nevertheless, if the nested class is static, it's not an inner class anymore.
+
+
+## Part 4
+
+2) An abstract class can contain state and implementation, also multiples interfaces whereas an interface mainly defines methods that a class must implement
+
+
+3) An interface can contain: constants,abstract method, default method, static method, private method
+
+
+4)
+```
+abstract class E {abstract void m1();}
+```
+
+5) 
+```
+interface D { void m1(); }
+```
+
+6) B extends D, then D extends C and B implements A, an object of B is also an instance of both C and A.
+
+
+## Part 5
+
+1) a lambda expression is used to create an implementation of a functional interface in a shorter way.
